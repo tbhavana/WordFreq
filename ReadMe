@@ -20,7 +20,7 @@ COMMAND REFERENCE
 
 "hadoop dfs -put [input location]" - To put input files into hdfs
 
-"hadoop jar wordcount.jar org.sahalbhavana.WordCount [input location] [output location]"- Running the Mapreduce program
+"hadoop jar wordcount.jar org.<packagename>.WordCount [input location] [output location]"- Running the Mapreduce program
 
 
 Notes:
