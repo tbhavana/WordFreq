@@ -1,0 +1,39 @@
+Group Members : 
+IS201301021 - Sahal Sajjad
+IS201301024 - Bhavana T
+
+
+FILES 
+-----
+Beautifier.scala and its compiled class files ( For preprocessing the text )
+WordCount.java and its jar file wordcount.jar
+OutputObtained contains the results we obtained
+
+COMMAND REFERENCE
+------------------
+"scalac Beautifier.scala && scala Beautifier.scala"- Scala Files compilation and run
+
+"jar -cvf [output .jar file location+name] -C [classfiles location] ." - Creation of jar
+
+"split --number=[Number of chunks] -d [output location/prefix]" - 
+														To split large file into chunks
+
+"hadoop dfs -put [input location]" - To put input files into hdfs
+
+"hadoop jar wordcount.jar org.sahalbhavana.WordCount [input location] [output location]"- Running the Mapreduce program
+
+
+Notes:
+Output can be accessed via webinterface localhost:50070 or via [output location in hdfs]
+
+
+ASSUMPTIONS MADE
+----------------
+1. During Regex Matching we have ommitted all words/names with unicode characters.
+2. We have not ommitted roman numerals considering them as words.
+3. All punctuations are removed
+4. words formed by two words and hyphen are split into two. Eg: day-break as day and break.
+
+ACKNOWLEDGEMENT
+----------------
+The project could not have been done if not with the help of beautiful documentation given at hadoop.apache.org. We thank the makers of the documentation for their efforts to make it so learner-friendly.
